@@ -3,7 +3,7 @@
 ## os + de
 EndeavourOS + Gnome
 
-# gnome shell look
+## gnome shell look
 - marble shell theme
 
 ### gnome extensions
@@ -141,3 +141,31 @@ hydrapaper -r
 ```
 
 enable with `systemctl --user enable random_wallpaper.timer`
+
+## rootless docker
+- only works some of the time for other stuff
+- works well with ipex-llm
+  ```bash
+  #!/bin/zsh
+  docker run -d \
+      --net=bridge \
+      --device=/dev/dri \
+      -p 11434:11434 \
+      -v ./models:/root/.ollama/models \
+      -e PATH=/llm/ollama:$PATH \
+      -e OLLAMA_HOST=0.0.0.0 \
+      -e no_proxy=localhost,127.0.0.1 \
+      -e ZES_ENABLE_SYSMAN=1 \
+      -e OLLAMA_INTEL_GPU=true \
+      -e ONEAPI_DEVICE_SELECTOR=level_zero:0 \
+      -e DEVICE=Arc \
+      --shm-size="16g" \
+      --memory="20G" \
+      --name=ipex-llm \
+      intelanalytics/ipex-llm-inference-cpp-xpu:oneapi_2024.2 \
+      bash -c "cd /llm/scripts/ && source ipex-llm-init --gpu --device Arc && bash start-ollama.sh && tail -f /llm/ollama/ollama.log"
+  ```
+
+## rootless podman
+- works well with devcontainers using vscode
+- works well with distrobox for gui applications
