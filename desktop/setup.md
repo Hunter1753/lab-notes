@@ -168,4 +168,5 @@ enable with `systemctl --user enable random_wallpaper.timer`
 
 ## rootless podman
 - works well with devcontainers using vscode
+  - In order to have the files listed as the USER declared in the Dockerfile, add the --userns=keep-id flag in the runArgs. as per https://github.com/microsoft/vscode-remote-release/issues/5296#issuecomment-875379969
 - works well with distrobox for gui applications
