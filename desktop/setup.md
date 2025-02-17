@@ -64,12 +64,12 @@ rules.yaml
   - Rule:
     - Key: [MultiPlatform Search, pressed]
     - KeyPress:
-      - XF86_AudioPause
+      - XF86_AudioPlay
       - depress
   - Rule:
     - Key: [MultiPlatform Search, released]
     - KeyPress:
-      - XF86_AudioPause
+      - XF86_AudioPlay
       - release
 - Rule:
   - Rule:
