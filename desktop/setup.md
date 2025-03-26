@@ -1,5 +1,22 @@
 # How my desktop pc is set up
 
+# librefox
+in `$HOME/.librewolf/librewolf.overrides.cfg`
+```cfg
+lockPref("privacy.resistFingerprinting.letterboxing", true);
+lockPref("identity.fxaccounts.enabled", true);
+lockPref("browser.sessionstore.resume_from_crash", false);
+pref("webgl.disabled", true);
+lockPref("privacy.clearOnShutdown.cache", false);
+lockPref("privacy.clearOnShutdown.cookies", false);
+lockPref("privacy.clearOnShutdown.downloads", false);
+lockPref("privacy.clearOnShutdown.formdata", true);
+lockPref("privacy.clearOnShutdown.history", false);
+lockPref("privacy.clearOnShutdown.offlineApps", false);
+lockPref("privacy.clearOnShutdown.sessions", false);
+lockPref("privacy.clearOnShutdown.siteSettings", false);
+```
+
 ## os + de
 EndeavourOS + Gnome
 
