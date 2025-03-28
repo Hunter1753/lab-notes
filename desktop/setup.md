@@ -1,6 +1,9 @@
 # How my desktop pc is set up
 
-# librefox
+## systemdboot
+`/EFI/loader/loader.conf`: change the line beginning with `default` to `default @saved`
+
+## librefox
 in `$HOME/.librewolf/librewolf.overrides.cfg`
 ```cfg
 lockPref("privacy.resistFingerprinting.letterboxing", true);
