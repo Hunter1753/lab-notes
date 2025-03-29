@@ -3,7 +3,7 @@
 ## systemdboot
 `/EFI/loader/loader.conf`: change the line beginning with `default` to `default @saved`
 
-## librefox
+## librewolf
 in `$HOME/.librewolf/librewolf.overrides.cfg`
 ```cfg
 lockPref("privacy.resistFingerprinting.letterboxing", true);
