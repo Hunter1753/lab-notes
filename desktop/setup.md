@@ -38,7 +38,7 @@ EndeavourOS + Gnome
 
 ### terminal
 - font: SauceCodePro Nerd Font Mono
-- shell: zsh + ohmyzsh + p10k
+- shell: zsh + p10k
 - 
 
 ## keyboard + mouse
