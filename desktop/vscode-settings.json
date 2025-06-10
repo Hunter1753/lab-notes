@@ -1,0 +1,20 @@
+{
+    "dev.containers.dockerComposePath": "podman compose",
+    "dev.containers.defaultExtensions": [
+        "geocode.spacecadet"
+    ],
+    "editor.dropIntoEditor.preferences": [
+
+    ],
+    "dev.containers.dockerPath": "podman",
+    "git.autofetch": true,
+    "extensions.ignoreRecommendations": true,
+    "git.suggestSmartCommit": false,
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "cpp": false
+    },
+}
