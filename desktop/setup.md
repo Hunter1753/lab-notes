@@ -207,3 +207,12 @@ enable with `systemctl --user enable random_wallpaper.timer`
 - works well with devcontainers using vscode
   - In order to have the files listed as the USER declared in the Dockerfile, add the --userns=keep-id flag in the runArgs. as per https://github.com/microsoft/vscode-remote-release/issues/5296#issuecomment-875379969
 - works well with distrobox for gui applications
+
+## HardDrives
+
+```
+UUID=xxxx-xxxxx-xxxxx /mnt/kingston4 ext4    rw,relatime 0 2
+
+# mounting entire BTRFS volume
+UUID=xxxx-xxxxx-xxxxx /mnt/defvol    btrfs   subvol=/,rw,relatime,compress=lzo,discard,space_cache 0 0
+```
