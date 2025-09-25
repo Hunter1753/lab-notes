@@ -126,6 +126,22 @@ Categories=Utility;GTK;
 X-GNOME-UsesNotifications=true
 ```
 
+## systemd units
+### solaar /dev/uinput rule
+```
+[Unit]
+Description=Grant uinput access to a specific user
+# Remove After=dev-uinput.device
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/bash -c 'if [ -e /dev/uinput ]; then setfacl -m u:YOURUSER:rw /dev/uinput; fi'
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+```
+
 ## systemd user units
 ### random wallpaper each hour using hydrapaper
 using [hydrapaper](https://aur.archlinux.org/packages/hydrapaper)
