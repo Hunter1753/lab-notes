@@ -207,6 +207,8 @@ enable with `systemctl --user enable random_wallpaper.timer`
 - works well with devcontainers using vscode
   - In order to have the files listed as the USER declared in the Dockerfile, add the --userns=keep-id flag in the runArgs. as per https://github.com/microsoft/vscode-remote-release/issues/5296#issuecomment-875379969
 - works well with distrobox for gui applications
+- use for Affinity by Canva via lutris and winetricks [AffinityOnLinux](https://github.com/seapear/AffinityOnLinux)
+- use for other apps to not pollute base system
 
 ## HardDrives
 
