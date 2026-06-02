@@ -9,7 +9,8 @@ in `$HOME/.librewolf/librewolf.overrides.cfg`
 lockPref("privacy.resistFingerprinting.letterboxing", true);
 lockPref("identity.fxaccounts.enabled", true);
 lockPref("browser.sessionstore.resume_from_crash", false);
-pref("webgl.disabled", true);
+pref("webgl.disabled", false);
+pref("librewolf.webgl.prompt", true);
 lockPref("privacy.sanitize.sanitizeOnShutdown", false);
 lockPref("privacy.clearOnShutdown.cache", false);
 lockPref("privacy.clearOnShutdown.cookies", false);
