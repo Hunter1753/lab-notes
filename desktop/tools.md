@@ -5,10 +5,10 @@
 
 ## temporary sftp server
 ```bash
-podman run \
-    -v <localpath>:/home/foo/upload \
-    -p 2222:22 -d docker.io/atmoz/sftp \
-    foo:pass:1000
+rclone serve sftp . \         
+  --user tempuser \
+  --pass temppassword \
+  --addr :2222
 ```
 either match username and uid or `chmod 777` the local folder and `chown` all the files afterwards
 
