@@ -10,7 +10,6 @@ rclone serve sftp . \
   --pass temppassword \
   --addr :2222
 ```
-either match username and uid or `chmod 777` the local folder and `chown` all the files afterwards
 
 ## Route Audio To Multiple Sinks
 
